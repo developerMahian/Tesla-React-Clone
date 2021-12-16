@@ -1,5 +1,85 @@
+:root {
+	--primary-color: #393c41;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	color: #393c41;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+	width: 100%;
+	font-size: 1.6rem;
+	font-family: "Raleway", sans-serif;
+	overflow-x: hidden;
+}
+
+h1 {
+	font-size: 4.25rem;
+	font-weight: 600;
+	padding: 0.5rem 0;
+}
+
+a {
+	text-decoration: none;
+	/* color: #5c5d61; */
+}
+
+.section-paragraph {
+	font-size: 1.4rem;
+}
+
+a.order-link {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	backface-visibility: hidden;
+	transition: all 0.15s;
+}
+
+a.order-link:hover,
+a.order-link:visited {
+	font-weight: 500;
+	border-width: 2.4px;
+	color: #131418;
+}
+
+/* alternate component stylings START */
+#homeBtn-large-height {
+	height: 17rem !important;
+}
+
+#solar-panels-heading {
+	font-size: 3.5rem;
+}
+
+#accessories-btn {
+	background-color: #171a20;
+	opacity: 1;
+}
+/* alternate component stylings END */
+
+@keyframes animateHomeArrow {
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
+		transform: none;
+	}
+
+	40% {
+		transform: translateY(5px);
+	}
+
+	60% {
+		transform: translateY(3px);
+	}
 }
