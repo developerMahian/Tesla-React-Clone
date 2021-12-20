@@ -1,5 +1,8 @@
 :root {
 	--primary-color: #393c41;
+	--secondary-color: #4d4e52;
+	--darker-color: #111113;
+	--nav-link-color: #181821;
 }
 
 html {
@@ -13,43 +16,68 @@ html {
 	margin: 0;
 	padding: 0;
 	box-sizing: inherit;
-	color: #393c41;
+	color: var(--primary-color);
 }
 
 body {
 	width: 100%;
+	font-family: "Gotham", sans-serif;
 	font-size: 1.6rem;
-	font-family: "Raleway", sans-serif;
+	font-weight: 400;
+	line-height: 1;
 	overflow-x: hidden;
 }
 
 h1 {
 	font-size: 4.25rem;
-	font-weight: 600;
+	font-weight: 500;
 	padding: 0.5rem 0;
 }
 
 a {
 	text-decoration: none;
-	/* color: #5c5d61; */
+	color: var(--secondary-color);
 }
 
-.section-paragraph {
+ol,
+ul {
+	list-style: none;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.navigation a,
+.ham-menu a {
+	color: var(--nav-link-color);
+}
+
+/* Home Sections start */
+.section-sub-heading {
 	font-size: 1.4rem;
+	font-weight: 400;
+	padding: 0.3rem 0;
+	color: var(--secondary-color);
 }
 
 a.order-link {
+	color: var(--secondary-color);
+	padding-bottom: 2px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	transition: all ease-in-out 0.3s;
 	backface-visibility: hidden;
-	transition: all 0.15s;
 }
 
-a.order-link:hover,
-a.order-link:visited {
-	font-weight: 500;
-	border-width: 2.4px;
-	color: #131418;
+a.order-link:hover {
+	border-width: 2px;
+	color: black;
+	border-color: var(--darker-color);
 }
+/* Home Sections end */
 
 /* alternate component stylings START */
 #homeBtn-large-height {
@@ -66,6 +94,7 @@ a.order-link:visited {
 }
 /* alternate component stylings END */
 
+/* animations */
 @keyframes animateHomeArrow {
 	0%,
 	20%,
