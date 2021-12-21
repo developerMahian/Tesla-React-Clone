@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import CloseIcon from "@mui/icons-material/Close";
 
 import screenSize from "../layout/ScreenBreakpoints";
 
@@ -53,7 +54,9 @@ function Header() {
 				</div>
 
 				<HamMenu>
-					<CloseMenu>*</CloseMenu>
+					<HamCloseWrapper>
+						<CloseMenu />
+					</HamCloseWrapper>
 
 					<ol className="ham-menu">
 						<li>
@@ -100,7 +103,7 @@ function Header() {
 						</li>
 					</ol>
 				</HamMenu>
-				{/* <HamBg /> */}
+				<HamBg />
 			</Container>
 		</header>
 	);
@@ -178,6 +181,7 @@ const HamMenu = styled.div`
 	padding: 2rem 3rem;
 	background-color: white;
 	box-shadow: -1rem 0 4rem rgba(0, 0, 0, 0.1);
+	overflow-y: scroll;
 	z-index: 100;
 
 	li {
@@ -191,6 +195,7 @@ const HamMenu = styled.div`
 		text-transform: capitalize;
 		padding: 1rem 1.65rem;
 		position: relative;
+		transition: color 0.3s ease-in-out;
 	}
 
 	a::before {
@@ -214,18 +219,19 @@ const HamMenu = styled.div`
 	}
 `;
 
-const CloseMenu = styled.div`
+const HamCloseWrapper = styled.div`
 	display: flex;
 	justify-content: end;
 	padding: 1rem;
 	margin: 1rem 0 3rem 0;
 `;
 
+const CloseMenu = styled(CloseIcon)``;
+
 const HamBg = styled.div`
 	position: fixed;
 	top: 0;
 	left: 0;
-	right: 0;
 	width: 100vw;
 	height: 100vh;
 	z-index: 50;

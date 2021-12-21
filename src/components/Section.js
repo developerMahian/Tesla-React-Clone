@@ -56,6 +56,7 @@ const Wrap = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	z-index: 0;
 `;
 
 const ItemText = styled.div`
@@ -64,6 +65,8 @@ const ItemText = styled.div`
 `;
 
 const HomeButtons = styled.div`
+	/* position: relative; */
+	z-index: 0;
 	height: 14rem;
 	@media only screen and (max-width: ${screenSize.sm}) {
 		height: 18rem;

@@ -2,7 +2,7 @@
 	--primary-color: #393c41;
 	--secondary-color: #4d4e52;
 	--darker-color: #111113;
-	--nav-link-color: #181821;
+	--nav-link-color: #181b21;
 }
 
 html {
@@ -51,8 +51,15 @@ header {
 	right: 0;
 }
 
-.navigation a,
+.navigation a {
+	color: var(--nav-link-color);
+}
+
 .ham-menu a {
+	color: var(--primary-color);
+}
+
+.ham-menu a:hover {
 	color: var(--nav-link-color);
 }
 
