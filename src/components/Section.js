@@ -5,11 +5,9 @@ import screenSize from "../layout/ScreenBreakpoints";
 
 function Section(props) {
 	return (
-		<Wrap bgImg={props.bgImg}>
+		<Wrap bgImg={props.bgImg} id={props.ID}>
 			<ItemText>
-				<h1 id={props.smHeading && "solar-panels-heading"}>
-					{props.heading}
-				</h1>
+				<h1 id={props.smHeading && "solar-panels-heading"}>{props.heading}</h1>
 				{/* conditioning for Accessories section */}
 				{props.description && (
 					<h2 className="section-sub-heading">{props.description}</h2>
@@ -22,9 +20,7 @@ function Section(props) {
 						{props.leftBtn}
 					</LeftButton>
 					{/* render RightButton only if rightBtn prop is passed */}
-					{props.rightBtn && (
-						<RightButton>{props.rightBtn}</RightButton>
-					)}
+					{props.rightBtn && <RightButton>{props.rightBtn}</RightButton>}
 				</OrderButtons>
 				{/* render DownArrow only if downArrow prop is passed */}
 				{props.downArrow && <DownArrow src="/images/down-arrow.svg" />}
@@ -48,11 +44,11 @@ Section.defaultProps = {
 
 export default Section;
 
-const Wrap = styled.div`
+const Wrap = styled.section`
 	width: 100vw;
+	/* height: ${props.ID == "accessories" ? "80vh" : "100vh"}; */
 	height: 100vh;
-	background: ${(props) => `url(/images/${props.bgImg})`} center/cover
-		no-repeat;
+	background: ${(props) => `url(/images/${props.bgImg})`} center/cover no-repeat;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;

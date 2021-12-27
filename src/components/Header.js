@@ -56,7 +56,13 @@ function Header() {
 							</li>
 						</span>
 						<li>
-							<a href="#" onClick={() => setMobileMenuOpen(true)}>
+							<a
+								href="#"
+								onClick={(e) => {
+									e.preventDefault();
+									setMobileMenuOpen(true);
+								}}
+							>
 								menu
 							</a>
 						</li>

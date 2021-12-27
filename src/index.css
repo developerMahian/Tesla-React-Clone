@@ -3,6 +3,7 @@
 	--secondary-color: #4d4e52;
 	--darker-color: #111113;
 	--nav-link-color: #181b21;
+	--footer-link-color: #5c5d61;
 }
 
 html {
@@ -125,6 +126,11 @@ a.order-link:hover {
 	opacity: 1;
 }
 /* alternate component stylings END */
+
+/* Footer */
+footer a {
+	color: var(--footer-link-color);
+}
 
 /* animations */
 @keyframes animateHomeArrow {

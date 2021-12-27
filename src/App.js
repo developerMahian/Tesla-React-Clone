@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
@@ -11,9 +11,8 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<h1>Shit</h1>
 				<Routes>
-					<Route path="/" element={<Home />} />
+					<Route exact path="/" element={[<Header />, <Home />, <Footer />]} />
 				</Routes>
 			</div>
 		);
