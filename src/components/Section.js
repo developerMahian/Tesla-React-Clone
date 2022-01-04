@@ -46,8 +46,7 @@ export default Section;
 
 const Wrap = styled.section`
 	width: 100vw;
-	/* height: ${props.ID == "accessories" ? "80vh" : "100vh"}; */
-	height: 100vh;
+	height: ${props.ID == "accessories" ? "80vh" : "100vh"};
 	background: ${(props) => `url(/images/${props.bgImg})`} center/cover no-repeat;
 	display: flex;
 	flex-direction: column;
